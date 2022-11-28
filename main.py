@@ -2,6 +2,9 @@ import face_recognition
 import cv2
 import numpy as np
 
+# TODO
+# Organize files, TTS, RPi, ImageLoader
+
 video_capture = cv2.VideoCapture(0)
 
 obama_image = face_recognition.load_image_file("obama.jpg")
