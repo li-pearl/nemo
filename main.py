@@ -3,11 +3,11 @@ import cv2
 import numpy as np
 
 # TODO
-# Organize files, TTS, RPi, ImageLoader
+# TTS, RPi, ImageLoader
 
 video_capture = cv2.VideoCapture(0)
 
-obama_image = face_recognition.load_image_file("obama.jpg")
+obama_image = face_recognition.load_image_file("images/obama.jpg")
 obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
 
 anirban_image = face_recognition.load_image_file("anirban.jpg")
@@ -31,6 +31,9 @@ anshi_face_encoding = face_recognition.face_encodings(anshi_image)[0]
 ainesh_image = face_recognition.load_image_file("ainesh.jpg")
 ainesh_face_encoding = face_recognition.face_encodings(ainesh_image)[0]
 
+astrid_image = face_recognition.load_image_file("astrid.jpg")
+astrid_face_encoding = face_recognition.face_encodings(astrid_image)[0]
+
 known_face_encodings = [
     obama_face_encoding,
     anirban_face_encoding,
@@ -39,7 +42,8 @@ known_face_encodings = [
     dhananjay_face_encoding,
     jayson_face_encoding,
     anshi_face_encoding,
-    ainesh_face_encoding
+    ainesh_face_encoding,
+    astrid_face_encoding
 ]
 
 known_face_names = [
@@ -50,7 +54,8 @@ known_face_names = [
     "Dhananjay",
     "Jayson",
     "Anshi",
-    "Ainesh"
+    "Ainesh",
+    "Astrid"
 ]
 
 face_locations = []
