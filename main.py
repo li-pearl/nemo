@@ -1,41 +1,44 @@
 import face_recognition
 import cv2
 import numpy as np
+# from image_loader import *
 
 # TODO
 # TTS, RPi, ImageLoader
 
 video_capture = cv2.VideoCapture(0)
 
-obama_image = face_recognition.load_image_file("images/obama.jpg")
-obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
-
-anirban_image = face_recognition.load_image_file("anirban.jpg")
+anirban_image = face_recognition.load_image_file("images/anirban.jpg")
 anirban_face_encoding = face_recognition.face_encodings(anirban_image)[0]
 
-shilpi_image = face_recognition.load_image_file("shilpi.jpg")
+shilpi_image = face_recognition.load_image_file("images/shilpi.jpg")
 shilpi_face_encoding = face_recognition.face_encodings(shilpi_image)[0]
 
-borshuen_image = face_recognition.load_image_file("bor-shuen.jpg")
+borshuen_image = face_recognition.load_image_file("images/bor-shuen.jpg")
 borshuen_face_encoding = face_recognition.face_encodings(borshuen_image)[0]
 
-dhananjay_image = face_recognition.load_image_file("dhananjay.jpg")
+dhananjay_image = face_recognition.load_image_file("images/dhananjay.jpg")
 dhananjay_face_encoding = face_recognition.face_encodings(dhananjay_image)[0]
 
-jayson_image = face_recognition.load_image_file("jayson.jpg")
+jayson_image = face_recognition.load_image_file("images/jayson.jpg")
 jayson_face_encoding = face_recognition.face_encodings(jayson_image)[0]
 
-anshi_image = face_recognition.load_image_file("anshi.jpg")
+anshi_image = face_recognition.load_image_file("images/anshi.jpg")
 anshi_face_encoding = face_recognition.face_encodings(anshi_image)[0]
 
-ainesh_image = face_recognition.load_image_file("ainesh.jpg")
+ainesh_image = face_recognition.load_image_file("images/ainesh.jpg")
 ainesh_face_encoding = face_recognition.face_encodings(ainesh_image)[0]
 
-astrid_image = face_recognition.load_image_file("astrid.jpg")
+astrid_image = face_recognition.load_image_file("images/astrid.jpg")
 astrid_face_encoding = face_recognition.face_encodings(astrid_image)[0]
 
+tillman_image = face_recognition.load_image_file("images/tillman.jpg")
+tillman_face_encoding = face_recognition.face_encodings(tillman_image)[0]
+
+matthew_image = face_recognition.load_image_file("images/matthew.jpg")
+matthew_face_encoding = face_recognition.face_encodings(matthew_image)[0]
+
 known_face_encodings = [
-    obama_face_encoding,
     anirban_face_encoding,
     shilpi_face_encoding,
     borshuen_face_encoding,
@@ -43,11 +46,12 @@ known_face_encodings = [
     jayson_face_encoding,
     anshi_face_encoding,
     ainesh_face_encoding,
-    astrid_face_encoding
+    astrid_face_encoding,
+    tillman_face_encoding,
+    matthew_face_encoding
 ]
 
 known_face_names = [
-    "Barack Obama",
     "Anirban",
     "Shilpi",
     "Bor-Shuen",
@@ -55,7 +59,9 @@ known_face_names = [
     "Jayson",
     "Anshi",
     "Ainesh",
-    "Astrid"
+    "Astrid",
+    "Tillman",
+    "Matthew"
 ]
 
 face_locations = []
