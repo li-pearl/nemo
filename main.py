@@ -1,13 +1,12 @@
 import face_recognition
 import cv2
 import numpy as np
-import pyttsx3
+import os
+from text_to_speech import *
 # from image_loader import *
 
 # TODO
 # RPi, ImageLoader
-
-engine = pyttsx3.init()
 
 video_capture = cv2.VideoCapture(0)
 
@@ -101,10 +100,8 @@ while True:
             face_names.append(name)
             
             if cv2.waitKey(1) & 0xFF == ord('s'):
-                engine.say(name)
-                engine.runAndWait()
+                speak(name)
 
-        
     process_this_frame = not process_this_frame
     
     for (top, right, bottom, left), name in zip(face_locations, face_names):
