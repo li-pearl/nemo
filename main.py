@@ -1,10 +1,13 @@
 import face_recognition
 import cv2
 import numpy as np
+import pyttsx3
 # from image_loader import *
 
 # TODO
-# TTS, RPi, ImageLoader
+# RPi, ImageLoader
+
+engine = pyttsx3.init()
 
 video_capture = cv2.VideoCapture(0)
 
@@ -38,6 +41,9 @@ tillman_face_encoding = face_recognition.face_encodings(tillman_image)[0]
 matthew_image = face_recognition.load_image_file("images/matthew.jpg")
 matthew_face_encoding = face_recognition.face_encodings(matthew_image)[0]
 
+shikha_image = face_recognition.load_image_file("images/shikha.jpg")
+shikha_face_encoding = face_recognition.face_encodings(shikha_image)[0]
+
 known_face_encodings = [
     anirban_face_encoding,
     shilpi_face_encoding,
@@ -48,7 +54,8 @@ known_face_encodings = [
     ainesh_face_encoding,
     astrid_face_encoding,
     tillman_face_encoding,
-    matthew_face_encoding
+    matthew_face_encoding,
+    shikha_face_encoding
 ]
 
 known_face_names = [
@@ -61,7 +68,8 @@ known_face_names = [
     "Ainesh",
     "Astrid",
     "Tillman",
-    "Matthew"
+    "Matthew",
+    "Shikha"
 ]
 
 face_locations = []
@@ -91,6 +99,11 @@ while True:
                 name = known_face_names[best_match_index]
             
             face_names.append(name)
+            
+            if cv2.waitKey(1) & 0xFF == ord('s'):
+                engine.say(name)
+                engine.runAndWait()
+
         
     process_this_frame = not process_this_frame
     
