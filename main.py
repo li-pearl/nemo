@@ -1,75 +1,24 @@
 import face_recognition
 import cv2
-import numpy as np
 import os
+import numpy as np
 from text_to_speech import *
-# from image_loader import *
 
 # TODO
-# RPi, ImageLoader
+# RPi OS
 
 video_capture = cv2.VideoCapture(0)
 
-anirban_image = face_recognition.load_image_file("images/anirban.jpg")
-anirban_face_encoding = face_recognition.face_encodings(anirban_image)[0]
+folder_dir = "C:/Users/anshi/OneDrive/Documents/project-22-23/images"
 
-shilpi_image = face_recognition.load_image_file("images/shilpi.jpg")
-shilpi_face_encoding = face_recognition.face_encodings(shilpi_image)[0]
+known_face_encodings = []
+known_face_names = []
 
-borshuen_image = face_recognition.load_image_file("images/bor-shuen.jpg")
-borshuen_face_encoding = face_recognition.face_encodings(borshuen_image)[0]
-
-dhananjay_image = face_recognition.load_image_file("images/dhananjay.jpg")
-dhananjay_face_encoding = face_recognition.face_encodings(dhananjay_image)[0]
-
-jayson_image = face_recognition.load_image_file("images/jayson.jpg")
-jayson_face_encoding = face_recognition.face_encodings(jayson_image)[0]
-
-anshi_image = face_recognition.load_image_file("images/anshi.jpg")
-anshi_face_encoding = face_recognition.face_encodings(anshi_image)[0]
-
-ainesh_image = face_recognition.load_image_file("images/ainesh.jpg")
-ainesh_face_encoding = face_recognition.face_encodings(ainesh_image)[0]
-
-astrid_image = face_recognition.load_image_file("images/astrid.jpg")
-astrid_face_encoding = face_recognition.face_encodings(astrid_image)[0]
-
-tillman_image = face_recognition.load_image_file("images/tillman.jpg")
-tillman_face_encoding = face_recognition.face_encodings(tillman_image)[0]
-
-matthew_image = face_recognition.load_image_file("images/matthew.jpg")
-matthew_face_encoding = face_recognition.face_encodings(matthew_image)[0]
-
-shikha_image = face_recognition.load_image_file("images/shikha.jpg")
-shikha_face_encoding = face_recognition.face_encodings(shikha_image)[0]
-
-known_face_encodings = [
-    anirban_face_encoding,
-    shilpi_face_encoding,
-    borshuen_face_encoding,
-    dhananjay_face_encoding,
-    jayson_face_encoding,
-    anshi_face_encoding,
-    ainesh_face_encoding,
-    astrid_face_encoding,
-    tillman_face_encoding,
-    matthew_face_encoding,
-    shikha_face_encoding
-]
-
-known_face_names = [
-    "Anirban",
-    "Shilpi",
-    "Bor-Shuen",
-    "Dhananjay",
-    "Jayson",
-    "Anshi",
-    "Ainesh",
-    "Astrid",
-    "Tillman",
-    "Matthew",
-    "Shikha"
-]
+for image in os.listdir(folder_dir):
+    face = face_recognition.load_image_file("images/"+image)
+    
+    known_face_encodings.append(face_recognition.face_encodings(face)[0])
+    known_face_names.append(os.path.splitext(image)[0].capitalize())
 
 face_locations = []
 face_encodings = []
