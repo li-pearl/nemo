@@ -9,7 +9,7 @@ from text_to_speech import *
 
 video_capture = cv2.VideoCapture(0)
 
-folder_dir = "C:/Users/anshi/code/science fair/scifair22-23/nemo/images"
+folder_dir = "/home/pi/code/sciencefair22-23/nemo/images"
 
 known_face_encodings = []
 known_face_names = []
