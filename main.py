@@ -9,7 +9,7 @@ from text_to_speech import *
 
 video_capture = cv2.VideoCapture(0)
 
-folder_dir = "C:/Users/anshi/OneDrive/Documents/project-22-23/images"
+folder_dir = "C:/Users/anshi/code/science fair/scifair22-23/nemo/images"
 
 known_face_encodings = []
 known_face_names = []
@@ -66,6 +66,7 @@ while True:
     cv2.imshow('Video', frame)
     
     if cv2.waitKey(1) & 0xFF == ord('q'):
+        print("end session")
         break
     
 video_capture.release()
