@@ -5,7 +5,7 @@ import numpy as np
 from text_to_speech import *
 
 # TODO
-# RPi OS
+# RPi OS, TTS for multiple faces
 
 video_capture = cv2.VideoCapture(0)
 
