@@ -5,7 +5,7 @@ import numpy as np
 from text_to_speech import *
 
 # TODO
-# TTS for multiple faces
+# TTS for multiple faces, GPIO
 
 video_capture = cv2.VideoCapture(0)
 
@@ -48,6 +48,7 @@ while True:
             
             face_names.append(name)
             
+            #On button press
             if cv2.waitKey(1) & 0xFF == ord('s'):
                 speak(name)
 
@@ -65,6 +66,7 @@ while True:
         
     cv2.imshow('Video', frame)
     
+    #On button press
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
     
