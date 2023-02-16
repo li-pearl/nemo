@@ -3,9 +3,15 @@ import cv2
 import os
 import numpy as np
 from text_to_speech import *
+#import RPi.GPIO as GPIO
 
 # TODO
 # TTS for multiple faces, GPIO
+
+#Setting GPIO pin numbers for
+#speak_button
+#quit_button
+#Setting button GPIO pins as inputs for both buttons
 
 video_capture = cv2.VideoCapture(0)
 
@@ -48,7 +54,7 @@ while True:
             
             face_names.append(name)
             
-            #On button press
+            #On speak_button press
             if cv2.waitKey(1) & 0xFF == ord('s'):
                 speak(name)
 
@@ -66,7 +72,7 @@ while True:
         
     cv2.imshow('Video', frame)
     
-    #On button press
+    #On quit_button press
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
     
