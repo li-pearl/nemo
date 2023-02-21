@@ -15,3 +15,10 @@ As of this year, there are over 6 million Americans living with Alzheimer’s di
 - opencv
 - cmake
 - pyttsx3 version 2.71
+
+Using python 3.7.6
+
+### Hardware
+
+- Raspberry Pi 4B
+- PiCamera V2 module
