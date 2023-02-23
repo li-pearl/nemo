@@ -10,7 +10,7 @@ import RPi.GPIO as GPIO
 print("Done.")
 
 # TODO
-# TTS for multiple faces, GPIO
+# TTS for multiple faces
 
 print("Setting Up GPIO pins")
 GPIO.setmode(GPIO.BCM)
