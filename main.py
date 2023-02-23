@@ -8,6 +8,7 @@ import RPi.GPIO as GPIO
 # TODO
 # TTS for multiple faces, GPIO
 
+print("Working...")
 GPIO.setmode(GPIO.BCM)
 #Setting GPIO pin numbers for speak and quit buttons
 speak_button = 14
