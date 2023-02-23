@@ -1,25 +1,38 @@
+print("Running...")
+
+print("Imports...")
 import face_recognition
 import cv2
 import os
 import numpy as np
 from text_to_speech import *
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
+print("Done.")
 
 # TODO
 # TTS for multiple faces, GPIO
 
-#Setting GPIO pin numbers for
-#speak_button
-#quit_button
-#Setting button GPIO pins as inputs for both buttons
+print("Setting Up GPIO pins")
+GPIO.setmode(GPIO.BCM)
+#Setting GPIO pin numbers for speak and quit buttons
+speak_button = 14
+quit_button = 15
 
+#Setting button GPIO pins as inputs for both buttons and enables internal pull down resistors
+GPIO.setup(speak_button, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(quit_button, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+print("Done.")
+
+print("Setting up video capture...")
 video_capture = cv2.VideoCapture(0)
+print("Done.")
 
 folder_dir = "/home/pi/code/sciencefair22-23/nemo/images"
 
 known_face_encodings = []
 known_face_names = []
 
+print("Organizing images and encoding faces - this may take a while...")
 for image in os.listdir(folder_dir):
     face = face_recognition.load_image_file("images/"+image)
     
@@ -30,8 +43,13 @@ face_locations = []
 face_encodings = []
 face_names = []
 process_this_frame = True
+print("Done.")
 
+print("Running loop - ready to go!")
 while True:
+    speak_button_state = GPIO.input(speak_button)
+    quit_button_state = GPIO.input(quit_button)
+    
     ret, frame = video_capture.read()
     
     if process_this_frame:
@@ -54,8 +72,9 @@ while True:
             
             face_names.append(name)
             
-            #On speak_button press
-            if cv2.waitKey(1) & 0xFF == ord('s'):
+            #On speak_button or s key press
+            #TODO: Check if state needs to be 1 or 0
+            if ((speak_button_state==1) or (cv2.waitKey(1) & 0xFF == ord('s'))):
                 speak(name)
 
     process_this_frame = not process_this_frame
@@ -73,8 +92,10 @@ while True:
     cv2.imshow('Video', frame)
     
     #On quit_button press
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if ((quit_button_state==1) or (cv2.waitKey(1) & 0xFF == ord('q'))):
         break
     
 video_capture.release()
 cv2.destroyAllWindows()
+GPIO.cleanup()
+print("Quit.")
