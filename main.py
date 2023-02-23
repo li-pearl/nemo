@@ -1,35 +1,38 @@
-print("imports...")
+print("Running...")
 
+print("Imports...")
 import face_recognition
 import cv2
 import os
 import numpy as np
 from text_to_speech import *
 import RPi.GPIO as GPIO
+print("Done.")
 
 # TODO
 # TTS for multiple faces, GPIO
 
-print("Working...")
+print("Setting Up GPIO pins")
 GPIO.setmode(GPIO.BCM)
 #Setting GPIO pin numbers for speak and quit buttons
 speak_button = 14
 quit_button = 15
 
-print("GPIO Set Up...")
 #Setting button GPIO pins as inputs for both buttons and enables internal pull down resistors
 GPIO.setup(speak_button, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(quit_button, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+print("Done.")
 
-print("Video...")
+print("Setting up video capture...")
 video_capture = cv2.VideoCapture(0)
+print("Done.")
 
 folder_dir = "/home/pi/code/sciencefair22-23/nemo/images"
 
 known_face_encodings = []
 known_face_names = []
 
-print("Organizing images...")
+print("Organizing images and encoding faces - this may take a while...")
 for image in os.listdir(folder_dir):
     face = face_recognition.load_image_file("images/"+image)
     
@@ -40,8 +43,9 @@ face_locations = []
 face_encodings = []
 face_names = []
 process_this_frame = True
+print("Done.")
 
-print("Loop...")
+print("Running loop - ready to go!")
 while True:
     speak_button_state = GPIO.input(speak_button)
     quit_button_state = GPIO.input(quit_button)
@@ -94,3 +98,4 @@ while True:
 video_capture.release()
 cv2.destroyAllWindows()
 GPIO.cleanup()
+print("Quit.")
