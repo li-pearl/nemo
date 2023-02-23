@@ -63,7 +63,7 @@ while True:
             
             #On speak_button or s key press
             #TODO: Check if state needs to be 1 or 0
-            if (speak_button_state==1) or (cv2.waitKey(1) & 0xFF == ord('s')):
+            if ((speak_button_state==1) or (cv2.waitKey(1) & 0xFF == ord('s'))):
                 speak(name)
 
     process_this_frame = not process_this_frame
@@ -81,7 +81,7 @@ while True:
     cv2.imshow('Video', frame)
     
     #On quit_button press
-    if (quit_button_state==1) or (cv2.waitKey(1) & 0xFF == ord('q')):
+    if ((quit_button_state==1) or (cv2.waitKey(1) & 0xFF == ord('q'))):
         break
     
 video_capture.release()
