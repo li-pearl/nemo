@@ -17,6 +17,7 @@ As of this year, there are over 6 million Americans living with Alzheimer’s di
 - pyttsx3 version 2.71
 
 Windows: Using python 3.7.6
+
 Raspberry Pi: 3.7.3
 
 ### Hardware
