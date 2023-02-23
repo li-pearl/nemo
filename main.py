@@ -1,3 +1,5 @@
+print("imports...")
+
 import face_recognition
 import cv2
 import os
@@ -14,10 +16,12 @@ GPIO.setmode(GPIO.BCM)
 speak_button = 14
 quit_button = 15
 
+print("GPIO Set Up...")
 #Setting button GPIO pins as inputs for both buttons and enables internal pull down resistors
 GPIO.setup(speak_button, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(quit_button, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
+print("Video...")
 video_capture = cv2.VideoCapture(0)
 
 folder_dir = "/home/pi/code/sciencefair22-23/nemo/images"
@@ -25,6 +29,7 @@ folder_dir = "/home/pi/code/sciencefair22-23/nemo/images"
 known_face_encodings = []
 known_face_names = []
 
+print("Organizing images...")
 for image in os.listdir(folder_dir):
     face = face_recognition.load_image_file("images/"+image)
     
@@ -36,6 +41,7 @@ face_encodings = []
 face_names = []
 process_this_frame = True
 
+print("Loop...")
 while True:
     speak_button_state = GPIO.input(speak_button)
     quit_button_state = GPIO.input(quit_button)
