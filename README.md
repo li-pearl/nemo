@@ -1,6 +1,6 @@
 # NEMO
 
-##AI Facial Recognition Assistive Device For Dementia and Alzheimer's Patients
+## AI Facial Recognition Assistive Device For Dementia and Alzheimer's Patients
 
 2022-2023 Pennsylvania Junior Academy of Science (PJAS) and Capital Area Science and Engineering Fair (CASEF) project
 
