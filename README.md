@@ -2,7 +2,7 @@
 
 AI Facial Recognition Assistive Device For Dementia and Alzheimer's Patients
 
-2022-2023 PJAS and CASEF project
+2022-2023 Pennsylvania Junior Academy of Science (PJAS) and Capital Area Science and Engineering Fair (CASEF) project
 
 🥇1st Award - PJAS Region 4
 
