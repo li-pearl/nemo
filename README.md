@@ -4,7 +4,11 @@
 
 2022-2023 Pennsylvania Junior Academy of Science (PJAS) and Capital Area Science and Engineering Fair (CASEF) project
 
-🥇1st Award - PJAS Region 4
+### Awards
+
+- 🥇1st Award - PJAS Region 4
+- Competing at PJAS States May 14-16
+- Competing at CASEF March 6-9
 
 ### Rationale
 
