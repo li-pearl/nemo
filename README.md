@@ -26,3 +26,15 @@ Raspberry Pi: 3.7.3
 
 - Raspberry Pi 4B
 - PiCamera V2 module
+
+### Installation
+
+### Acknowledgements
+
+- 💸 Susquehanna IEEE, Lemelson Foundation, CASEF and PJAS for providing funding and encouragement to continue making
+- My grandfather
+- Open source example contributers in face_recognition
+- My friends for providing their faces for testing
+
+Dedicated to my boro ma
+1919-2023
