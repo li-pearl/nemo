@@ -10,7 +10,7 @@ QUALIFIED: International Science and Engineering Fair (ISEF)
 
 - 🥇1st Award - PJAS Region 4
 - ~~Competing at PJAS States May 14-16~~ Unable to attend due to ISEF
-- 🥇 Grand Champion - Competing at CASEF March 6-9
+- 🥇 Grand Champion - CASEF
 - Competing at ISEF May 13-19
 
 ### Rationale
