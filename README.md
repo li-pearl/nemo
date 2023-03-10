@@ -1,6 +1,6 @@
 # NEMO
 
-## AI Facial Recognition Assistive Device For Dementia and Alzheimer's Patients
+## Wearable AI Facial Recognition Assistive Device For Dementia and Alzheimer's Patients
 
 ### Competitions
 
