@@ -2,9 +2,11 @@
 
 ## AI Facial Recognition Assistive Device For Dementia and Alzheimer's Patients
 
-2022-2023 Pennsylvania Junior Academy of Science (PJAS)
-Capital Area Science and Engineering Fair (CASEF)
-QUALIFIED: International Science and Engineering Fair (ISEF)
+### Competitions
+
+- 2022-2023 Pennsylvania Junior Academy of Science (PJAS)
+- 2022-2023 Capital Area Science and Engineering Fair (CASEF)
+- QUALIFIED: International Science and Engineering Fair (ISEF)
 
 ### Awards
 
