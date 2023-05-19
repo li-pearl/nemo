@@ -7,15 +7,18 @@
 - 2022-2023 Pennsylvania Junior Academy of Science (PJAS)
 - 2022-2023 Capital Area Science and Engineering Fair (CASEF)
 - QUALIFIED: 2023 PA BioGENEius Challenge
-- QUALIFIED: 2023 International Science and Engineering Fair (ISEF)
+- 2023 International Science and Engineering Fair (ISEF)
+  - Biomedical Engineering (ENBM084)
 
 ### Awards
 
 - 🥇1st Award - PJAS Region 4
-- 🥇 Grand Champion - CASEF
-- Competing at PA BioGENEius Challenge April 13
+- 🥇Grand Champion - CASEF
+- 🥇PA Biotechnology Insititue BioGENEius Challenge Winner
+  - Healthcare Challenge
+- Competing at 2023 International BioGENEius Challenge - May 19-22
 - ~~Competing at PJAS States May 14-16~~ ISEF Conflict
-- Competing at ISEF May 13-19
+- NC State College of Engineering Award - 2023 Regeneron ISEF
 
 ### Rationale
 
