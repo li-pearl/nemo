@@ -4,9 +4,13 @@
 
 ### Competitions
 
-- 2022-2023 Pennsylvania Junior Academy of Science (PJAS)
+- 2022-2023 Pennsylvania Junior Academy of Science (PJAS) Region 4
+  - Qualified but not competing at States
 - 2022-2023 Capital Area Science and Engineering Fair (CASEF)
-- QUALIFIED: 2023 PA BioGENEius Challenge
+- 2023 PA BioGENEius Challenge
+  - Healthcare Challenge (Medical Biotechnology)
+- 2023 International BioGENEius Challenge
+  - Healthcare
 - 2023 International Science and Engineering Fair (ISEF)
   - Biomedical Engineering (ENBM084)
 
