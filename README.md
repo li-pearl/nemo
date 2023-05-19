@@ -13,6 +13,7 @@
   - Healthcare
 - 2023 International Science and Engineering Fair (ISEF)
   - Biomedical Engineering (ENBM084)
+- Hackaday Assistive Technology Challenge
 
 ### Awards
 
