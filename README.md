@@ -2,28 +2,7 @@
 
 ## Wearable AI Facial Recognition Assistive Device For Dementia and Alzheimer's Patients
 
-### Competitions
-
-- 2022-2023 Pennsylvania Junior Academy of Science (PJAS) Region 4
-  - Qualified but not competing at States
-- 2022-2023 Capital Area Science and Engineering Fair (CASEF)
-- 2023 PA BioGENEius Challenge
-  - Healthcare Challenge (Medical Biotechnology)
-- 2023 International BioGENEius Challenge
-  - Healthcare
-- 2023 International Science and Engineering Fair (ISEF)
-  - Biomedical Engineering (ENBM084)
-- Hackaday Assistive Technology Challenge
-
-### Awards
-
-- 🥇1st Award - PJAS Region 4
-- 🥇Grand Champion - CASEF
-- 🥇PA Biotechnology Insititue BioGENEius Challenge Winner
-  - Healthcare Challenge
-- Competing at 2023 International BioGENEius Challenge - May 19-22
-- ~~Competing at PJAS States May 14-16~~ ISEF Conflict
-- NC State College of Engineering Award - 2023 Regeneron ISEF
+Regeneron ISEF 2023 - ENBM084
 
 ### Rationale
 
@@ -47,6 +26,29 @@ Raspberry Pi: 3.7.3
 - PiCamera V2 module
 
 ### Installation
+
+### Competitions
+
+- 2022-2023 Pennsylvania Junior Academy of Science (PJAS) Region 4
+  - Qualified but not competing at States
+- 2022-2023 Capital Area Science and Engineering Fair (CASEF)
+- 2023 PA BioGENEius Challenge
+  - Healthcare Challenge (Medical Biotechnology)
+- 2023 International BioGENEius Challenge
+  - Healthcare
+- 2023 International Science and Engineering Fair (ISEF)
+  - Biomedical Engineering (ENBM084)
+- Hackaday Assistive Technology Challenge
+
+### Awards
+
+- 🥇1st Award - PJAS Region 4
+- 🥇Grand Champion - CASEF
+- 🥇PA Biotechnology Insititue BioGENEius Challenge Winner
+  - Healthcare Challenge
+- Competing at 2023 International BioGENEius Challenge - May 19-22
+- ~~Competing at PJAS States May 14-16~~ ISEF Conflict
+- NC State College of Engineering Award - 2023 Regeneron ISEF
 
 ### Acknowledgements
 
