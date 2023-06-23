@@ -1,13 +1,17 @@
+print("Imports...")
 import face_recognition
 import cv2
 import os
 import numpy as np
 from text_to_speech import *
+print("Done.")
 
 # TODO
 # RPi OS, TTS for multiple faces
 
 video_capture = cv2.VideoCapture(0)
+
+print("Naming and encoding known faces... this might take a while")
 
 folder_dir = "C:/Users/anshi/code/science fair/scifair22-23/nemo/images"
 
@@ -19,12 +23,15 @@ for image in os.listdir(folder_dir):
     
     known_face_encodings.append(face_recognition.face_encodings(face)[0])
     known_face_names.append(os.path.splitext(image)[0].capitalize())
+    
+print("Done.")
 
 face_locations = []
 face_encodings = []
 face_names = []
 process_this_frame = True
 
+print("Ready to go! You should see a display...")
 while True:
     ret, frame = video_capture.read()
     
@@ -49,8 +56,9 @@ while True:
             face_names.append(name)
             
             if cv2.waitKey(1) & 0xFF == ord('s'):
+                print("Speaking " + name)
                 speak(name)
-
+                
     process_this_frame = not process_this_frame
     
     for (top, right, bottom, left), name in zip(face_locations, face_names):
@@ -66,7 +74,7 @@ while True:
     cv2.imshow('Video', frame)
     
     if cv2.waitKey(1) & 0xFF == ord('q'):
-        print("end session")
+        print("End session.")
         break
     
 video_capture.release()
