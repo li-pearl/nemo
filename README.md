@@ -55,7 +55,6 @@ Raspberry Pi: 3.7.3
 - 💸 Susquehanna IEEE, Lemelson Foundation, CASEF and PJAS for providing funding and encouragement to continue making
 - My grandfather
 - Open source example contributers in face_recognition
-- My friends for providing their faces for testing
 
 Dedicated to my boro ma
 
